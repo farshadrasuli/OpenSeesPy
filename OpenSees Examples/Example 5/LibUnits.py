@@ -3,7 +3,7 @@
 #       (c) Farshad Rasuli, 2021
 #
 # E-Mail: farshad.rasuli@gmail.com
-# github.com/farshadrasuli/OpenSeesPy/tree/main/OpenSees%20Examples/Example%205
+# github.com/farshadrasuli/OpenSeesPy/tree/main/OpenSees%20Examples/Example%205/
 # farshadrasuli.github.io/OpenSeesPy
 #
 # Inspired from:
