@@ -1,4 +1,4 @@
-# ----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 # Example 5. 2D Frame --  Build Model
 # nonlinearBeamColumn element, inelastic fiber section -- Steel W-Section
 #		Silvia Mazzoni & Frank McKenna, 2006
@@ -8,7 +8,7 @@
 # E-Mail: farshad.rasuli@gmail.com
 # github.com/farshadrasuli/OpenSeesPy/tree/main/OpenSees%20Examples/Example%205
 # farshadrasuli.github.io/OpenSeesPy
-#------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
 
 # import the OpenSeesPy module
 import openseespy.opensees as ops
