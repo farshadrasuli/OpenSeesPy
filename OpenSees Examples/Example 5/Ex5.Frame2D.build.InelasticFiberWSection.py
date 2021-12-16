@@ -40,11 +40,11 @@ ops.wipe()
 ops.model('basic', '-ndm', 2, '-ndf', 3)
 
 
-# set up name of data directory (you can remove this)
-dataDir = 'Data'
+# set up name of output data directory
+outDir = 'Output'
 # create data directory
-if not os.path.exists(dataDir):
-    os.makedirs(dataDir)
+if not os.path.exists(outDir):
+    os.makedirs(outDir)
 
 # ground-motion file directory
 GMDir = 'Ground-motions'
@@ -318,34 +318,34 @@ for i in range(len(eigenValues)):
 # Set recorders ==============================================================
 
 # displacements of free node
-ops.recorder('Node','-file', dataDir+'/freeNodeDisp.out', '-time', '-node', 41, '-dof', 1, 2, 3, 'disp')
+ops.recorder('Node','-file', outDir+'/freeNodeDisp.out', '-time', '-node', 41, '-dof', 1, 2, 3, 'disp')
 
 # displacements of support nodes
-ops.recorder('Node','-file', dataDir+'/baseDisp.out', '-time', '-node', 11, 12, 13, 14, '-dof', 1, 2, 3, 'disp')
+ops.recorder('Node','-file', outDir+'/baseDisp.out', '-time', '-node', 11, 12, 13, 14, '-dof', 1, 2, 3, 'disp')
 
 # support reaction
-ops.recorder('Node','-file', dataDir+'/baseReaction.out', '-time', '-node', 11, 12, 13, 14, '-dof', 1, 2, 3, 'reaction')
+ops.recorder('Node','-file', outDir+'/baseReaction.out', '-time', '-node', 11, 12, 13, 14, '-dof', 1, 2, 3, 'reaction')
 
 # lateral drift
-#ops.recorder('Drift','-file', dataDir+'/DrNode.out', '-time', '-iNode', 11, '-jNode', 41, '-dof', 1, '-perpDirn', 2)
+#ops.recorder('Drift','-file', outDir+'/DrNode.out', '-time', '-iNode', 11, '-jNode', 41, '-dof', 1, '-perpDirn', 2)
 
 # forces in local coordinates, element i
-ops.recorder('Element','-file', dataDir+'/ele111Forces.out', '-time', '-ele', 111, 'localForce')
+ops.recorder('Element','-file', outDir+'/ele111Forces.out', '-time', '-ele', 111, 'localForce')
 
 # section forces, axial and moment, node i
-ops.recorder('Element','-file', dataDir+'/ele111Sec1Force.out', '-time', '-ele', 111, 'section', 1, 'force')
+ops.recorder('Element','-file', outDir+'/ele111Sec1Force.out', '-time', '-ele', 111, 'section', 1, 'force')
 
 # section deformations, axial and curvature, node i
-ops.recorder('Element','-file', dataDir+'/ele111Sec1Defo.out', '-time', '-ele', 111, 'section', 1, 'deformation')
+ops.recorder('Element','-file', outDir+'/ele111Sec1Defo.out', '-time', '-ele', 111, 'section', 1, 'deformation')
 
 # section forces, axial and moment, node j
-ops.recorder('Element','-file', dataDir+'/ele111Sec'+str(numIntgrPts)+'Force.out', '-time', '-ele', 111, 'section', numIntgrPts, 'force')
+ops.recorder('Element','-file', outDir+'/ele111Sec'+str(numIntgrPts)+'Force.out', '-time', '-ele', 111, 'section', numIntgrPts, 'force')
 
 # section deformations, axial and curvature, node j
-ops.recorder('Element','-file', dataDir+'/ele111Sec'+str(numIntgrPts)+'Defo.out', '-time', '-ele', 111, 'section', numIntgrPts, 'deformation')
+ops.recorder('Element','-file', outDir+'/ele111Sec'+str(numIntgrPts)+'Defo.out', '-time', '-ele', 111, 'section', numIntgrPts, 'deformation')
 
 # steel fiber stress-strain, node i
-ops.recorder('Element','-file', dataDir+'/ele1sec1StressStrain.out', '-time', '-ele', 111, 'section', numIntgrPts, 'fiber', 0, 0, matHardening, 'stressStrain')
+ops.recorder('Element','-file', outDir+'/ele1sec1StressStrain.out', '-time', '-ele', 111, 'section', numIntgrPts, 'fiber', 0, 0, matHardening, 'stressStrain')
 
 
 
