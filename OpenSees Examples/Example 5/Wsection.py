@@ -28,7 +28,6 @@ input arguments:
 import openseespy.opensees as ops
 import openseespy.postprocessing.ops_vis as opsv
 
-import numpy as np
 import matplotlib.pyplot as plt
 
 def section(secTag, matTag, d, bf, tf, tw, nfdw, nftw, nfbf, nftf):
@@ -58,7 +57,7 @@ def section(secTag, matTag, d, bf, tf, tw, nfdw, nftw, nfbf, nftf):
         ['patch', 'quad', matTag,        nfbf,        nftf, y1, z4, y1, z1, y2, z1, y2, z4],
         ['patch', 'quad', matTag,        nftw,        nfdw, y2, z3, y2, z2, y3, z2, y3, z3],
         ['patch', 'quad', matTag,        nfbf,        nftf, y3, z4, y3, z1, y4, z1, y4, z4]
-                ]
+               ]
     opsv.plot_fiber_section(fib_sec, matcolor='r')
     plt.axis('equal')
     plt.gca().invert_xaxis()
