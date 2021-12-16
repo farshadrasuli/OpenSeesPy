@@ -13,8 +13,8 @@ Note that the “LCol” parameter has changed to “colHeight,” and the “LB
 Figure 2. Standard W section (Source: (c) [OpenSees](https://opensees.berkeley.edu/)).<br/>
 
 Sections:
-- Section A: W27x114
-- Section B: W24x94
+- Section A-A: W27x114
+- Section B-B: W24x94
 
 ### Files
 - [Ex5.Frame2D.build.InelasticFiberWSection.py](https://github.com/farshadrasuli/OpenSeesPy/blob/8d37c574ed1e92e3492f10844a573ef4c2f199e9/OpenSees%20Examples/Example%205/Ex5.Frame2D.build.InelasticFiberWSection.py)
