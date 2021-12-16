@@ -1,4 +1,4 @@
-# -----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 # Example 5. 2D Frame --  Build Model
 # nonlinearBeamColumn element, inelastic fiber section -- Steel W-Section
 #		Silvia Mazzoni & Frank McKenna, 2006
