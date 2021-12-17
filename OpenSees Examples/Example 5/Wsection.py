@@ -30,7 +30,7 @@ import openseespy.postprocessing.ops_vis as opsv
 
 import matplotlib.pyplot as plt
 
-def section(secTag, matTag, d, bf, tf, tw, nfdw, nftw, nfbf, nftf):
+def section(secTag, secTitle, matTag, d, bf, tf, tw, nfdw, nftw, nfbf, nftf):
     dw = d - 2*tf
     y1 = - d / 2
     y2 = - dw / 2
@@ -60,5 +60,6 @@ def section(secTag, matTag, d, bf, tf, tw, nfdw, nftw, nfbf, nftf):
               ]
     opsv.plot_fiber_section(fib_sec, matcolor='r')
     plt.axis('equal')
+    plt.title(secTitle)
     plt.gca().invert_xaxis()
     plt.show()
