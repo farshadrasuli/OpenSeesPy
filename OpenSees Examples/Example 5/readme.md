@@ -16,8 +16,8 @@ Sections:
 - Section A-A: W27x114
 - Section B-B: W24x94
 
-### Build Model, and Gravitational and Eigen Value Analysis
-Note: these are basic files, which you need for analysis.
-- [Ex5.Frame2D.build.InelasticFiberWSection.py](https://github.com/farshadrasuli/OpenSeesPy/blob/8d37c574ed1e92e3492f10844a573ef4c2f199e9/OpenSees%20Examples/Example%205/Ex5.Frame2D.build.InelasticFiberWSection.py)
-- [LibUnits.py](https://github.com/farshadrasuli/OpenSeesPy/blob/8d37c574ed1e92e3492f10844a573ef4c2f199e9/OpenSees%20Examples/Example%205/LibUnits.py)
-- [Wsection.py](https://github.com/farshadrasuli/OpenSeesPy/blob/8d37c574ed1e92e3492f10844a573ef4c2f199e9/OpenSees%20Examples/Example%205/Wsection.py)
+### Files
+- [Ex5.Frame2D.InelasticFiberWSection.build.py](https://github.com/farshadrasuli/OpenSeesPy/blob/10f3f99a55837d43925c599012a194b3f8b18073/OpenSees%20Examples/Example%205/Ex5.Frame2D.InelasticFiberWSection.build.py) — Build model, and gravitational analysis.
+- [LibUnits.py](https://github.com/farshadrasuli/OpenSeesPy/blob/10f3f99a55837d43925c599012a194b3f8b18073/OpenSees%20Examples/Example%205/LibUnits.py) — A module for units.
+- [Wsection.py](https://github.com/farshadrasuli/OpenSeesPy/blob/10f3f99a55837d43925c599012a194b3f8b18073/OpenSees%20Examples/Example%205/Wsection.py) — A module for constructing a standard W- or I- shape Fiber Section object.
+- [Ex5.Frame2D.InelasticFiberWSection.analyze.Static.Push.py](https://github.com/farshadrasuli/OpenSeesPy/blob/10f3f99a55837d43925c599012a194b3f8b18073/OpenSees%20Examples/Example%205/Ex5.Frame2D.InelasticFiberWSection.analyze.Static.Push.py) — Build model, gravitational analysis, and Static Push-over analysis.
