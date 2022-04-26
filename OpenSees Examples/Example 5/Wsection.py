@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------
 # Wsection.py -- create a standard W section
-#       (c) Farshad Rasuli, 2021
+#       (c) Farshad Rasuli, 2021-2022
 #
 # E-Mail: farshad.rasuli@gmail.com
 # github.com/farshadrasuli/OpenSeesPy/tree/main/OpenSees%20Examples/Example%205
@@ -23,7 +23,28 @@ input arguments:
 	nfbf = number of fibers along flange width
 	nftf = number of fibers along flange thickness
 '''
-
+# Section profile
+#
+#          /----------bf---------/
+#          +---------------------+  /  /
+#          |                     |  tf |
+#          +--------+   +--------+  /  |
+#                   |   |           |  |
+#                   | y |           |  |
+#                   | ^ |           |  |
+#                   | | |           |  |
+#                   | | |           |  |
+#              z <--|-+ |           dw d
+#                   |   |           |  |
+#                   |   |           |  |
+#                   |   |           |  |
+#                   |   |           |  |
+#                   |   |           |  |
+#          +--------+   +--------+  /  |
+#          |                     |  tf |
+#          +---------------------+  /  /
+#                   /tw/
+#
 
 import openseespy.opensees as ops
 import openseespy.postprocessing.ops_vis as opsv
