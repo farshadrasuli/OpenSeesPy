@@ -329,7 +329,7 @@ opsplt.createODB(modelName, 'Gravity', Nmodes=3)
 opsplt.plot_model('nodes', 'elements', Model=modelName)
 
 # plot mode shape 1 with period
-opsplt.plot_modeshape(1, 10, Model=modelName)
+opsplt.plot_modeshape(1, 100, Model=modelName)
 
 
 print('\n*****' + modelName + '*****\n' + datetime.datetime.now().strftime('%H:%M:%S') + ': Model built successfully.')
@@ -555,7 +555,7 @@ for level in range(2,numStory+1+1):
     Fi = iFi[level-1-1]
     for pier in range(1,numBay+1+1):
         nodeTag = level*10 + pier
-        ops.load(nodeTag, Fi, 0.0, 0.0, 0.0, 0.0, 0.0)
+        ops.load(nodeTag, Fi, 0.0, 0.0)
     # end for pier
 # end for level
 
