@@ -1,9 +1,9 @@
 # -----------------------------------------------------------------------------
 # LibUnits.py -- define system of units
-#       (c) Farshad Rasuli, 2021
+#       (c) Farshad Rasuli, 2021-2022
 #
 # E-Mail: farshad.rasuli@gmail.com
-# github.com/farshadrasuli/OpenSeesPy/tree/main/OpenSees%20Examples/Example%205/
+# github.com/farshadrasuli/OpenSeesPy
 # farshadrasuli.github.io/OpenSeesPy
 #
 # Inspired from:
@@ -14,34 +14,71 @@
 import math
 
 # define UNITS
-m = 1.0	    		# define basic units -- output units
-N = 1.0 			# define basic units -- output units
-sec = 1.0 			# define basic units -- output units
-LunitTXT = "m"			# define basic-unit text for output
-FunitTXT = "N"			# define basic-unit text for output
-TunitTXT = "sec"		# define basic-unit text for output
-inch = 0.0254*m			# define basic imperial units
-kip = 4.45e3*N 			# define basic imperial units
+kg = 1.0                            # define basic units -- output units for mass
+m = 1.0                             # define basic units -- output units for length
+sec = 1.0                           # define basic units -- output units for time
+N = kg*math.pow(sec,2)/m            # define basic units -- output units for force
+rad = 1.0                           # define basic units -- output units for angles
+
+MunitTXT = "kg"                     # define basic unit text for mass output
+LunitTXT = "m"                      # define basic unit text for length output
+TunitTXT = "sec"                    # define basic unit text for time output
+FunitTXT = "N"                      # define basic unit text for force output
+AunitTXT = "rad"                    # define basic unit text for angle output
+
+inch = 0.0254*m                     # define basic Imperial units for length
+kip = 4448.2216*N                   # define basic Imperial units for force
+Slug = kip*math.pow(sec,2)/inch     # define basic Imperial units for mass
+
+
+
 # define engineering units
-cm = 1.e-2*m                # centimeter, needed for displacement input in MultipleSupport excitation
-mm = 1.e-3*m                # mili-meter
-ft = 12*inch                # foot
-Pa = N/math.pow(m,2)        # Newton per square meter
-kPa = 1.e3*Pa               # kilo-Pascal or kilo-Newton per square meter
-MPa = 1.0e6*Pa              # Mega-Pascal or Newton per square mili-meter
-GPa = 1.0e9*Pa              # Giga-Pascal or kilo-Newton per square mili-meter
-ksi = kip/math.pow(inch,2)  # kilo-pounds per square inch
-psi = 1.e-3*ksi             # pounds per square inch
-lbf = psi*inch*inch	    	# pounds force
-pcf = lbf/math.pow(ft,3)   	# pounds per cubic foot
-psf = lbf/math.pow(ft,3) 	# pounds per square foot
-cm2 = cm*cm                 # cm^2
-cm4 = cm*cm*cm*cm           # cm^4
-mm2 = mm*mm                 # mm^2
-mm4 = mm*mm*mm*mm           # mm^4
-in2 = inch*inch     		# inch^2
-in4 = inch*inch*inch*inch 	# inch^4
-PI = 2*math.asin(1.0)   	# define constants
-g = 9.80665*m/math.pow(sec,2)    	# gravitational acceleration
-Ubig = 1.e10            			# a really large number
-Usmall = 1/Ubig             		# a really small number
+g = 9.80665*m/math.pow(sec,2)       # gravitational acceleration
+
+ton = 1.e3*kg                       # tonne equal to 1,000 kilo-gram
+
+cm = 1.e-2*m                        # centimeter, needed for displacement input in Multiple Support excitation
+mm = 1.e-3*m                        # mili-meter
+
+ft = 12*inch                        # foot
+
+kN = 1.e3*N                         # kilo-Newton
+MN = 1.e6*N                         # Mega-Newton
+
+kgf = N*g                           # kilo-gram-force
+tonf = kgf/1000.0                   # tonne-force
+
+Pa = N/math.pow(m,2)                # Newton per square meter
+kPa = 1.e3*Pa                       # kilo-Pascal or kilo-Newton per square meter
+MPa = 1.0e6*Pa                      # Mega-Pascal or Newton per square mili-meter or Mega-Newton per square meter
+GPa = 1.0e9*Pa                      # Giga-Pascal or kilo-Newton per square mili-meter or Giga-Newton per square meter
+
+degree = 180.0/math.pi*rad          # degree
+
+ksi = kip/math.pow(inch,2)          # kilo-pounds per square inch
+psi = 1.e-3*ksi                     # pounds per square inch
+lbf = 1.e-3*kip                     # pounds force
+plf = lbf/ft                        # pounds per linear foot
+psf = lbf/math.pow(ft,2)            # pounds per square foot
+pcf = lbf/math.pow(ft,3)            # pounds per cubic foot
+
+slug = lbf*math.pow(sec,2)/ft       # Imperial mass = slug or pound-square second per foot
+
+m2 = math.pow(m,2)                  # m²
+m3 = math.pow(m,3)                  # m³
+m4 = math.pow(m,4)                  # m⁴
+cm2 = math.pow(cm,2)                # cm²
+cm3 = math.pow(cm,3)                # cm³
+cm4 = math.pow(cm,4)                # cm⁴
+mm2 = math.pow(mm,2)                # mm²
+mm3 = math.pow(mm,3)                # mm³
+mm4 = math.pow(mm,4)                # mm⁴
+in2 = math.pow(inch,2)              # inch²
+in3 = math.pow(inch,3)              # inch³
+in4 = math.pow(inch,4)              # inch⁴
+ft2 = math.pow(ft,2)                # ft²
+
+pi = 2*math.asin(1.0)               # define π
+
+Ubig = 1.e10                        # a really large number
+Usmall = 1/Ubig                     # a really small number
