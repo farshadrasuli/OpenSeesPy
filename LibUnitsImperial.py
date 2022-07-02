@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------
-# LibUnits.py -- define system of units
+# LibUnitsImperial.py -- define system of units
 #       (c) Farshad Rasuli, 2021-2022
 #
 # E-Mail: farshad.rasuli@gmail.com
